@@ -10,12 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Activity2 extends AppCompatActivity {
 
     @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d("fb","onCreate...");
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         TextView textView;
@@ -27,12 +21,20 @@ public class Activity2 extends AppCompatActivity {
         Log.d("fb","2:onCreate...");
 
         Intent intent = getIntent();
-        String str = intent.getStringExtra("name") + "-"
+        String str1 = intent.getStringExtra("name") + "-"
                 +intent.getIntExtra("age",1);
 
-        textView.setText(str);
+        String str2 = intent.getExtras().getString("name")
+                + ":" + intent.getExtras().getInt("age");
+
+        textView.setText(str2);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("fb","2:onPause...");
+    }
     @Override
     protected void onRestart() {
         super.onRestart();
