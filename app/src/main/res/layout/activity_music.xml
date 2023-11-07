@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MusicActivity">
+
+    <TextView
+        android:id="@+id/textview_music1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="奏乐" />
+
+    <Button
+        android:id="@+id/buttonM1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="播放音乐" />
+
+    <Button
+        android:id="@+id/buttonM2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="暂停音乐" />
+
+    <Button
+        android:id="@+id/buttonM3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="绑定服务2" />
+
+    <Button
+        android:id="@+id/buttonM4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="解除绑定" />
+
+
+</LinearLayout>
