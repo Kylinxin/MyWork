@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="35sp"
-        android:text="这是我的界面" />
+        android:textStyle="bold"
+        android:text="Me" />
 
 </FrameLayout>

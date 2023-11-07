@@ -1,7 +1,9 @@
 package com.example.mywork;
 
+
 import android.content.Context;
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -62,29 +64,30 @@ public class ltFragment extends Fragment {
         }
     }
 
-    private RecyclerView recyclerView;
-    private List<String> list;
-    private Context context;
-    private Myadapter myadapter;
+    RecyclerView recyclerView;
+    List<Message> messages;
+    Context context;
+    MessageAdapter messageAdapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_lt,container,false);
-        context=view.getContext();
+        View view=inflater.inflate(R.layout.talks,container,false);
+
         recyclerView=view.findViewById(R.id.recyclerview);
-        list=new ArrayList();
+        messages=new ArrayList();
         initData();
 
         LinearLayoutManager manager=new LinearLayoutManager(context);
 
         manager.setOrientation(LinearLayoutManager.VERTICAL);
 
-        myadapter = new Myadapter(context,list);
+//        myadapter = new Myadapter(context,messages);
+        messageAdapter = new MessageAdapter(messages);
+        context=view.getContext();
 
-        recyclerView.setAdapter(myadapter);
+        recyclerView.setAdapter(messageAdapter);
 
         recyclerView.setLayoutManager(manager);
-
 
         recyclerView.addItemDecoration(new DividerItemDecoration(context,LinearLayoutManager.VERTICAL));
         return view;
@@ -94,16 +97,15 @@ public class ltFragment extends Fragment {
     }
 
     private void initData(){
-        list.add("网友1:青青园中葵");
-        list.add("网友2:朝露待日晞");
-        list.add("网友3:阳春布德泽");
-        list.add("网友4:万物生光辉");
-        list.add("网友5:常恐秋节至");
-        list.add("网友6:焜黄华叶衰");
-        list.add("网友7:百川东到海");
-        list.add("网友8:何时复西归");
-        list.add("网友9:少壮不努力");
-        list.add("网友10:老大徒伤悲");
+        messages.add(new Message("Mom", "Good Morning!Good Morning!Good Morning!", "8:00 AM"));
+        messages.add(new Message("Dad", "Did u eat lunch?Did u eat lunch?", "12:00 AM"));
+        messages.add(new Message("jzc", "teach me web!teach me web!", "12:05 AM"));
+        messages.add(new Message("szf", "e4w?e4w?e4w?e4w?e4w?e4w?", "12:06 AM"));
+        messages.add(new Message("dxy", "rrrrrrrrrrrrrrrrrrrrrrrrrr", "12:07 AM"));
+        messages.add(new Message("lyh", "ysqdysqdysqdysqdysqdysqd", "12:08 AM"));
+        messages.add(new Message("fb", "pwnpwnpwnpwnpwnpwnpwnpwnpwn", "12:09 AM"));
+        messages.add(new Message("jg", "bxlbxlbxlbxlbxlbxlbxlbxlbxl", "23:59 PM"));
+
     }
 
 }

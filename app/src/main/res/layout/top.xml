@@ -12,9 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/black"
+        android:background="#DDDDDD"
         android:gravity="center_horizontal"
-        android:text="微信"
-        android:textColor="@color/white"
+        android:text="WeTalks"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="40sp"></TextView>
 </LinearLayout>

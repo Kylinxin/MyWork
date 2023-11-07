@@ -1,16 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".txlFragment">
+    android:layout_height="wrap_content">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/linearLayout_txl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="35sp"
-        android:text="这是通讯录界面" />
+        android:layout_height="wrap_content"
 
-</FrameLayout>
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/image_touxiang"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="left|center_vertical"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/text_duihuakuang"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:gravity="left|center_vertical"
+            android:text="TextView"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</LinearLayout>
